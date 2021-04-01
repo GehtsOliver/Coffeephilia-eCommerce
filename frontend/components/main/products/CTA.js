@@ -51,7 +51,7 @@ const CTA = () => {
       <h2>
         Take a deep dive right into our Store or choose from the products below.
       </h2>
-      <ShopButton href="/shop">Shop <i class="fas fa-shopping-cart"></i></ShopButton>
+      <ShopButton href="/shop">Shop <i className="fas fa-shopping-cart"></i></ShopButton>
     </CtaContainer>
   );
 };
