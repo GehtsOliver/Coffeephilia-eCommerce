@@ -13,8 +13,6 @@ const FeatureComponent = styled("div")`
   font-size: 1.2rem;
   transition: all 200ms;
   border-radius: 10px;
-
-
   flex-direction: column;
   justify-content: flex-start;
 
@@ -47,7 +45,6 @@ const FeatureComponent = styled("div")`
   }
   @media (max-width:600px){
     width: 80vw;
-
   }
 `;
 

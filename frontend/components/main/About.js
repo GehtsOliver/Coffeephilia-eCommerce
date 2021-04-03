@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
-import Feature from "./About/Feature";
+import Feature from "./about/Feature";
 
 import { Parallax } from "react-scroll-parallax";
 
