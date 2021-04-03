@@ -34,7 +34,7 @@ const ParallaxWrapper = styled("div")`
 `;
 
 const About = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(0);
 
   // Listen for resize of device width
   useEffect(() => {
