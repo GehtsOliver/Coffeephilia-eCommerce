@@ -39,12 +39,13 @@ const About = () => {
   // Listen for resize of device width
   useEffect(() => {
     window.addEventListener("resize", () => setWindowWidth(window.innerWidth));
+    setWindowWidth(window.innerWidth)
     return () => {
       window.removeEventListener("resize", () =>
         setWindowWidth(window.innerWidth)
       );
     };
-  }, [windowWidth]);
+  }, []);
 
   return (
     <AboutComponent id="about">
