@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+import { BurgerMenuContext } from "../../context/BurgerMenuContext";
 
-import Link from "next/link";
+import Sidebar from "../utilities/Sidebar";
+import BurgerMenu from "../main/navbar/BurgerMenu";
 import Image from "next/image";
+import NavbarItem from "../main/navbar/NavbarItem";
+import Darklayer from "../main/navbar/Darklayer";
 
 const StyledNav = styled("nav")`
   position: sticky;
@@ -13,56 +17,51 @@ const StyledNav = styled("nav")`
   align-items: center;
   width: 100vw;
   height: 4rem;
-  background: #transparent;
   padding: 0 10rem;
-  color: #fff;
-  overflow-x: hidden;
-
-  > div:hover {
-    cursor: pointer;
+  @media (max-width: 992px) {
+    padding: 0 1rem;
   }
+`;
 
-  h1 {
-    font-size: 1.6rem;
-  }
-
-  > div {
+const StyledContainerLeft = styled("div")`
+  @media (max-width: 992px) {
+    width: 100vw;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
   }
-
+`;
+const StyledContainerRight = styled("div")`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5rem;
   @media (max-width: 992px) {
     display: none;
   }
 `;
 
-const StyledContainerLeft = styled("div")``;
-const StyledContainerRight = styled("div")`
-  column-gap: 5rem;
-`;
-
 const Navbar = () => {
+  const { burgerMenu } = useContext(BurgerMenuContext);
+
   return (
     <StyledNav>
+      {burgerMenu && <Darklayer />}
       <StyledContainerLeft>
-        <Link href="/">
+        <NavbarItem link="/" title="Coffeephilia®">
           <Image
             src="https://res.cloudinary.com/djiqhmzqs/image/upload/v1616924424/Coffeephilia/Logo_qfyqeu.svg"
             height={30}
             width={50}
           />
-        </Link>
-        <h1>Coffeephilia® </h1>
+        </NavbarItem>
+        <BurgerMenu />
       </StyledContainerLeft>
       <StyledContainerRight>
-        <Link href="/">
-          <h1>Home</h1>
-        </Link>
-        <Link href="/shop">
-          <h1>Shop</h1>
-        </Link>
+        <NavbarItem link="/" title="Home"></NavbarItem>
+        <NavbarItem link="/shop" title="Shop"></NavbarItem>
+        <NavbarItem link="/contact" title="Contact"></NavbarItem>
       </StyledContainerRight>
+      {burgerMenu && <Sidebar color="white" />}
     </StyledNav>
   );
 };

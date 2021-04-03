@@ -12,9 +12,22 @@ a {
 
 }
 
+:root{
+  --primary-color: var("#8D8741");
+  --secondary-color: var("#BC986A");
+  --background-color: var("#DAAD86");
+}
+
 * {
   box-sizing: border-box;
+}
 
+h1{
+  color: white;
+}
+
+h2, p {
+  color: white;
 }
 
 

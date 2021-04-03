@@ -8,9 +8,14 @@ const StyledItem = styled("figure")`
   font-size: 1.5rem;
   align-items: center;
   row-gap: 1rem;
+  margin: 0;
 
   h1{
       margin: 0;
+  }
+
+  @media(max-width: 800px){
+    font-size: 1.2rem;
   }
 `;
 

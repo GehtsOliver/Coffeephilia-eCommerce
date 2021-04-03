@@ -2,8 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 const CtaContainer = styled("div")`
-  color: black;
-  height: 20rem;
   width: 60vw;
   margin: 0 auto;
   display: flex;
@@ -19,7 +17,7 @@ const CtaContainer = styled("div")`
 `;
 
 const ShopButton = styled("a")`
-  background-color: black;
+  background-color: #8D8741;
   color: white;
   width: 20rem;
   height: 4rem;
@@ -31,9 +29,9 @@ const ShopButton = styled("a")`
   justify-content: center;
 
   :hover{
-      color: black;
+      color: #8D8741;
       background-color: white;
-      border: 1px solid black;
+      
   }
 
   i{

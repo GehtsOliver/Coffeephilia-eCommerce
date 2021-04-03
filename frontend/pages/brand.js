@@ -1,14 +1,12 @@
 import React from "react";
 import { ParallaxProvider } from "react-scroll-parallax";
 
-
 import Layout from "../components/utilities/Layout";
 import BrandComponent from "../components/main/Brand";
 import AboutComponent from "../components/main/About";
-import OffersComponent from "../components/main/Offers"
-import ReviewsComponent from "../components/main/Reviews"
-import ProductsComponent from "../components/main/Products"
-import Footer from "../components/utilities/Footer"
+import OffersComponent from "../components/main/Offers";
+import ProductsComponent from "../components/main/Products";
+import Footer from "../components/utilities/Footer";
 
 const Brand = () => {
   return (
@@ -16,10 +14,9 @@ const Brand = () => {
       <Layout>
         <BrandComponent />
         <AboutComponent />
-        <OffersComponent/>
-        <ProductsComponent/>
-        <ReviewsComponent/>
-        <Footer/>
+        <OffersComponent />
+        <ProductsComponent />
+        <Footer />
       </Layout>
     </ParallaxProvider>
   );

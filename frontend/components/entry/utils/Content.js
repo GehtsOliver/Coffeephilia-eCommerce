@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+
 import Link from "next/link";
 import Image from "next/image";
+import CTA from "./CtaComponent";
 
 const Wrapper = styled("div")`
   display: flex;
@@ -14,8 +16,8 @@ const Header = styled("header")`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.3rem;
-  
+  font-size: 1.6rem;
+  color: black !important;
 `;
 const Container = styled("div")`
   width: 50vw;
@@ -23,37 +25,10 @@ const Container = styled("div")`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  row-gap: 5rem;
+  row-gap: 3rem;
+
   @media (max-width: 900px) {
     width: 100vw;
-  }
-`;
-
-const CTA = styled("div")`
-  text-transform: capitalize;
-  width: 40rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-  transition: 300ms all ease;
-  box-shadow: 8px 8px 10px 5px gray;
-  padding: 1rem;
-
-  h3{
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
-  }
-
-  :hover {
-    color: white;
-    background: black;
-    cursor: pointer;
-  }
-
-  @media (max-width: 1300px) {
-    width: 90%;
   }
 `;
 
@@ -62,24 +37,25 @@ const Content = () => {
     <Wrapper>
       <Header>
         <Link href="/">
-          <Image
-            src="https://res.cloudinary.com/djiqhmzqs/image/upload/v1616924424/Coffeephilia/Logo_qfyqeu.svg"
-            height={40}
-            width={80}
-          />
+          <>
+            <Image
+              src="https://res.cloudinary.com/djiqhmzqs/image/upload/v1616924424/Coffeephilia/Logo_qfyqeu.svg"
+              height={40}
+              width={80}
+            />
+            <h3>Coffeephilia®</h3>
+          </>
         </Link>
-        <h1>Coffeephilia®</h1>
       </Header>
       <Container>
-        <CTA>
-          <Link href="/shop">
-            <h3>I want to go shopping  <i class="fas fa-shopping-cart"></i></h3>
-          </Link>
+        <CTA link="/shop" content="I want to go shopping">
+          <i class="fas fa-shopping-cart" />
         </CTA>
-        <CTA>
-          <Link href="/brand">
-            <h3>I want to find out about the brand  <Image src="/favicon.ico"height={25} width={25}/></h3>
-          </Link>
+        <CTA link="/brand" content="Find out about the brand">
+          <Image src="/favicon.ico" height={30} width={30} />
+        </CTA>
+        <CTA link="/contact" content="Get in touch with Coffeephilia®">
+          <i class="fas fa-envelope" />
         </CTA>
       </Container>
     </Wrapper>

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import BurgerMenuContextProvider from "../../context/BurgerMenuContext";
 import Navbar from "../utilities/Navbar";
 
 const StyledBrand = styled("section")`
@@ -8,13 +9,14 @@ const StyledBrand = styled("section")`
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  overflow-x: hidden;
 `;
 
 const Brand = () => {
   return (
     <StyledBrand>
-      <Navbar />
+      <BurgerMenuContextProvider>
+        <Navbar />
+      </BurgerMenuContextProvider>
     </StyledBrand>
   );
 };
