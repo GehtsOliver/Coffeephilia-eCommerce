@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-import Content from "./utils/Content";
-import Video from "./utils/Video";
+import Content from "./utilities/Content";
+import Video from "./utilities/Video";
 
 const StyledSection = styled("section")`
   display: flex;

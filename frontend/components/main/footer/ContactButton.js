@@ -3,17 +3,17 @@ import styled from "styled-components";
 
 const StyledButton = styled("a")`
   border-radius: 100%;
-  padding: 1rem;
+  padding: 1.3rem;
   color: white;
   transition: all 200ms;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #8D8741;
+  background: #DAAD86;
 
   :hover {
     transform: scale3d(1.05, 1.05, 1.05);
-    color: #8D8741;
+    color: #DAAD86;
     background: white;
   }
 

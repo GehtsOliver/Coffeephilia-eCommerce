@@ -7,15 +7,17 @@ import { Parallax } from "react-scroll-parallax";
 
 const AboutComponent = styled("section")`
   width: 100vw;
+  position: relative;
+  top: 85vh;
   min-height: 110vh;
   display: flex;
   flex-direction: column;
   padding: 3rem 1rem;
-  background: #daad86;
+  row-gap: 5rem;
 `;
 
 const Title = styled("h1")`
-  font-size: 2.5rem !important;
+  font-size: 3rem !important;
   text-align: center;
 `;
 
@@ -39,7 +41,7 @@ const About = () => {
   // Listen for resize of device width
   useEffect(() => {
     window.addEventListener("resize", () => setWindowWidth(window.innerWidth));
-    setWindowWidth(window.innerWidth)
+    setWindowWidth(window.innerWidth);
     return () => {
       window.removeEventListener("resize", () =>
         setWindowWidth(window.innerWidth)

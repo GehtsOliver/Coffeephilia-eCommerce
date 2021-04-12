@@ -27,7 +27,7 @@ const CTA = styled("a")`
   }
   :hover {
     color: white !important;
-    background: #daad86;
+    background: #412D2A;
     cursor: pointer;
   }
 

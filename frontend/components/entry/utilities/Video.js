@@ -5,18 +5,18 @@ const VideoContainer = styled("div")`
   width: 50vw;
   overflow: hidden;
   height: 100vh;
-  background: #daad86;
+  background: #412D2A;
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  row-gap: 4rem;
+  row-gap: 2rem;
 
   video {
-    height: 70vh;
+    height: 80vh;
   }
   h1 {
-    color: black !important;
+    color: white !important;
     margin: 0.2rem;
   }
 
@@ -38,9 +38,9 @@ const DarkLayer = styled("div")`
   left: 0;
   width: 50vw;
   background: #000;
-  height: 70vh;
+  height: 80vh;
   z-index: 10000;
-  opacity: 0.5;
+  opacity: 0.6;
 
   @media (max-width: 900px) {
     display: none;
@@ -61,8 +61,8 @@ const Video = () => {
         <div>
           <h1>World's tastiest, greenest and most reliable coffee brand</h1>
           <h1>Our mission is to provide you with flawless coffee</h1>
+          <h1>Coffeephilia® 2021</h1>
         </div>
-        <h1>Coffeephilia® 2021</h1>
       </VideoContainer>
       <DarkLayer />
     </>

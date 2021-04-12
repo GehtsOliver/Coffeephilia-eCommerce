@@ -3,14 +3,14 @@ import styled from "styled-components";
 import Image from "next/image";
 
 const FeatureComponent = styled("div")`
-  width: 22vw;
+  width: 21vw;
   height: 30rem;
   padding: 0;
   display: flex;
-  box-shadow: 8px 8px 10px 5px gray;
-  background: #BC986A;
+  
+  background: #DAAD86;
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   transition: all 200ms;
   border-radius: 10px;
   flex-direction: column;
@@ -18,7 +18,7 @@ const FeatureComponent = styled("div")`
 
   h1 {
     text-align: center;
-    color: #8D8741;
+    color: #412D2A;
     margin: 0;
     margin-top:.2rem;
 
@@ -37,6 +37,7 @@ const FeatureComponent = styled("div")`
 
   :hover{
     transform: scale3d(1.05, 1.05, 1.05);
+    box-shadow: 4px 4px 10px 5px #412D2A;
   }
 
   @media (max-width:1000px){

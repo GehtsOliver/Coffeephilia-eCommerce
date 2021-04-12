@@ -8,21 +8,6 @@ import Image from "next/image";
 import NavbarItem from "../main/navbar/NavbarItem";
 import Darklayer from "../main/navbar/Darklayer";
 
-const StyledNav = styled("nav")`
-  position: sticky;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100vw;
-  height: 4rem;
-  padding: 0 10rem;
-  @media (max-width: 992px) {
-    padding: 0 1rem;
-  }
-`;
-
 const StyledContainerLeft = styled("div")`
   @media (max-width: 992px) {
     width: 100vw;
@@ -44,7 +29,7 @@ const Navbar = () => {
   const { burgerMenu } = useContext(BurgerMenuContext);
 
   return (
-    <StyledNav>
+    <>
       {burgerMenu && <Darklayer />}
       <StyledContainerLeft>
         <NavbarItem link="/" title="Coffeephilia®">
@@ -61,8 +46,8 @@ const Navbar = () => {
         <NavbarItem link="/shop" title="Shop"></NavbarItem>
         <NavbarItem link="/contact" title="Contact"></NavbarItem>
       </StyledContainerRight>
-      {burgerMenu && <Sidebar color="white" />}
-    </StyledNav>
+      {burgerMenu && <Sidebar />}
+    </>
   );
 };
 

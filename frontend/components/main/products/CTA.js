@@ -17,7 +17,7 @@ const CtaContainer = styled("div")`
 `;
 
 const ShopButton = styled("a")`
-  background-color: #8D8741;
+  background-color: #412D2A;
   color: white;
   width: 20rem;
   height: 4rem;
@@ -29,7 +29,7 @@ const ShopButton = styled("a")`
   justify-content: center;
 
   :hover{
-      color: #8D8741;
+      color: #412D2A;
       background-color: white;
       
   }
