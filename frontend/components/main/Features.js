@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Navbar from "../utilities/Navbar";
 import { NavbarWrapper } from "../utilities/NavbarWrapper";
-import About from "./about";
+import About from "./About";
 
 const StyledBrand = styled("section")`
   min-height: 230vh;
