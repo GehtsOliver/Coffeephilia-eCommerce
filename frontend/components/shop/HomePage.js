@@ -2,12 +2,23 @@ import React, { useContext, useEffect, useState } from "react";
 import { ShopContext } from "../../context/shopContext";
 import styled from "styled-components";
 
-import Products from "./utilities/Products";
+import Product from "./utilities/Product";
 import Pagination from "./utilities/Pagination";
+import Footer from "../utilities/Footer";
 
 const Container = styled("section")`
-  height: 60vh;
-  padding: 0 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 2rem;
+  
+`;
+
+const Grid = styled("div")`
+  width: 60%;
+  margin: 0 auto;
+  min-height: 60vh;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 
@@ -19,7 +30,8 @@ const Container = styled("section")`
   }
 
   @media (max-width: 992px) {
-    padding: 0 1rem;
+    padding: 0;
+    grid-template-columns: repeat(2, 1fr);
   }
 `;
 
@@ -40,7 +52,7 @@ const HomePage = ({}) => {
   }, [productsRender, productsIndex]);
 
   for (let i = productsIndex; i < productsRender; i++) {
-    productsMarkUp.push(<Products key={products.id} product={products[i]} />);
+    productsMarkUp.push(<Product key={products.id} product={products[i]} />);
   }
 
   const increaseProductsToRender = () => {
@@ -62,13 +74,14 @@ const HomePage = ({}) => {
   if (!products) return <div>No products yet</div>;
   return (
     <Container>
-      {productsMarkUp}
+      <Grid>{productsMarkUp}</Grid>
       <Pagination
         nextProducts={increaseProductsToRender}
         backProducts={decreaseProductsToRender}
         productsMax={productsRender}
         productsMin={productsIndex}
       />
+      <Footer />
     </Container>
   );
 };

@@ -3,9 +3,9 @@ import styled from "styled-components";
 import { ShopContext } from "../../../context/shopContext";
 
 const Container = styled("div")`
-  width: 100%;
+  width: 100vw;
   display: flex;
-  margin: 0 auto;
+  justify-content: center;
   column-gap: 1rem;
 `;
 

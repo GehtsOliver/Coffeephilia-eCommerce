@@ -7,15 +7,16 @@ import LinkContainer from "../main/footer/LinkContainer";
 const FooterWrapper = styled("footer")`
   display: flex;
   flex-direction: column;
+  width: 100%;
 `;
 
 const FooterComponent = styled("div")`
   min-height: 20rem;
-  background: #412D2A;
+  background: #412d2a;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  @media(max-width:800px){
+  @media (max-width: 800px) {
     flex-direction: column;
     padding: 3rem 0;
     row-gap: 1rem;
@@ -24,13 +25,14 @@ const FooterComponent = styled("div")`
 `;
 
 const Warning = styled("div")`
-  padding-top: 0.4rem;
-  min-height: 2rem;
-  font-size: 1.2rem;
-  background: #DAAD86;
+  padding: 0.1rem;
+
+  font-weight: bold;
+  background: #daad86;
   color: black;
   text-align: center;
   border-top: 1px solid white;
+  font-family: "Helvetica";
 `;
 
 const Footer = () => {
@@ -42,9 +44,9 @@ const Footer = () => {
         <h1>Coffeephilia 2021 ®</h1>
       </FooterComponent>
       <Warning>
-        This is just a sample website to show off my programming skills.
-        Coffeephilia does not reflect a real company. I do not claim any rights
-        to the ressources used on this site. Design and code by Oliver Graetz ♡
+        Coffeephilia does not represent a real company. I do not claim any
+        rights to the ressources used on this site nor did I intend to infringe
+        any. Design and code by Oliver Graetz ☕
       </Warning>
     </FooterWrapper>
   );

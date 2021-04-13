@@ -10,7 +10,6 @@ export const NavbarWrapper = styled("nav")`
   width: 100vw;
   height: 4rem;
   padding: 0 10rem;
-
   }
 
   @media (max-width: 992px) {
