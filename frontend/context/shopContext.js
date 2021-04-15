@@ -11,7 +11,7 @@ const ShopContext = React.createContext();
 const ShopProvider = ({ children }) => {
   const [products, setProducts] = useState([]),
     [product, setProduct] = useState({}),
-    [checkout, setCheckout] = useState({}),
+    [checkout, setCheckout] = useState(),
     [isCartOpen, setIsCartOpen] = useState(false);
 
   useEffect(() => {
@@ -19,35 +19,36 @@ const ShopProvider = ({ children }) => {
   }, []);
 
   const createCheckout = async () => {
-    const checkout = await client.checkout.create();
-    setCheckout(checkout);
+    const createdCheckout = await client.checkout.create();
+    setCheckout("Hello");
+    console.log("checkout created:");
+    console.log(checkout);
+
   };
 
   const fetchProducts = async () => {
     const products = await client.product.fetchAll();
     setProducts(products);
-    console.log(products)
-
   };
 
   const fetchProductById = async (id) => {
-    const product = client.product.fetch(id);
+    const product = await client.product.fetch(id);
     setProduct(product);
   };
 
   const addItemToCheckout = async (variantId, quantity) => {
-    const lineItemToAdd = [
+    const lineItemsToAdd = [
       {
         variantId,
         quantity: parseInt(quantity, 10),
       },
     ];
-
     const checkout = await client.checkout.addLineItems(
       checkout.id,
-      lineItemToAdd
+      lineItemsToAdd
     );
     setCheckout(checkout);
+    openCart();
   };
 
   const closeCart = () => {

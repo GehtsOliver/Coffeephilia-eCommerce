@@ -12,7 +12,12 @@ const Container = styled("section")`
   align-items: center;
   justify-content: center;
   row-gap: 2rem;
-  
+  padding-top: 6rem;
+
+  @media (max-width: 992px) {
+    padding-top: 2rem;
+
+  }
 `;
 
 const Grid = styled("div")`
@@ -59,7 +64,6 @@ const HomePage = ({}) => {
     if (productsRender < products.length) {
       setProductsRender(productsRender + 8);
       setProductsIndex(productsIndex + 8);
-      console.log("Increased " + productsIndex + " " + productsRender);
     }
   };
 
@@ -67,7 +71,6 @@ const HomePage = ({}) => {
     if (productsRender > 8) {
       setProductsRender(productsRender - 8);
       setProductsIndex(productsIndex - 8);
-      console.log("Decreased " + productsIndex + " " + productsRender);
     }
   };
 

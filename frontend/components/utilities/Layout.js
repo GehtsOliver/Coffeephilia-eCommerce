@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import Header from "./Header";
+import Head from "./Head";
 
 const StyledLayout = styled("div")`
   min-height: 100vh;
@@ -14,7 +14,7 @@ const StyledLayout = styled("div")`
 const Layout = ({ children, title, description, tags }) => {
   return (
     <StyledLayout>
-      <Header title={title} description={description} tags={tags} />
+      <Head title={title} description={description} tags={tags} />
       <main>{children}</main>
     </StyledLayout>
   );

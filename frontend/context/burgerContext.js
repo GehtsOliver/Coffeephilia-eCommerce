@@ -2,7 +2,7 @@ import React, { createContext, useState } from "react";
 
 export const BurgerMenuContext = createContext();
 
-const BurgerMenuContextProvider = ({ children }) => {
+const BurgerProvider = ({ children }) => {
   const [burgerMenu, setBurgerMenu] = useState(false);
 
   return (
@@ -12,4 +12,4 @@ const BurgerMenuContextProvider = ({ children }) => {
   );
 };
 
-export default BurgerMenuContextProvider;
+export default BurgerProvider;

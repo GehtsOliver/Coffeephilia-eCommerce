@@ -34,7 +34,7 @@ const Product = styled("a")`
 const Products = ({ product }) => {
   if (!product) return null;
   return (
-    <Link href={`/product/${product.id}`}>
+    <Link href={`/products/${product.id}`}>
       <Product>
         <Image src={product.images[0].src} width={120} height={180} />
         <h5>{product.title}</h5>

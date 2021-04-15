@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
-import { BurgerMenuContext } from "../../../context/BurgerMenuContext";
+import { BurgerMenuContext } from "../../../context/burgerContext";
 
 
 const StyledBurger = styled("nav")`

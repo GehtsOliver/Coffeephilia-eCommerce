@@ -1,11 +1,14 @@
 import "../styles/globals.css";
-import BurgerMenuContextProvider from "../context/BurgerMenuContext";
+import BurgerProvider from "../context/burgerContext";
+import ShopProvider from "../context/shopContext";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <BurgerMenuContextProvider>
-      <Component {...pageProps} />
-    </BurgerMenuContextProvider>
+    <ShopProvider>
+      <BurgerProvider>
+        <Component {...pageProps} />
+      </BurgerProvider>
+    </ShopProvider>
   );
 }
 
