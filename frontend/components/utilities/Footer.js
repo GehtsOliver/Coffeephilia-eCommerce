@@ -12,7 +12,7 @@ const FooterWrapper = styled("footer")`
 
 const FooterComponent = styled("div")`
   min-height: 20rem;
-  background: #412d2a;
+  background: #DAAD86;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -28,10 +28,9 @@ const Warning = styled("div")`
   padding: 0.1rem;
 
   font-weight: bold;
-  background: #daad86;
+  background: #BC986A;
   color: black;
   text-align: center;
-  border-top: 1px solid white;
   font-family: "Helvetica";
 `;
 

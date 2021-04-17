@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 
 import Head from "../../components/utilities/Head";
 import Navbar from "../../components/utilities/Navbar";
-import Sidebar from "../../components/shop/utilities/Sidebar";
+import SideDrawer from "../../components/shop/utilities/Cart";
 import { NavbarWrapper } from "../../components/utilities/NavbarWrapper";
 import ProductPage from "../../components/shop/ProductPage";
 
@@ -25,7 +25,7 @@ const id = () => {
       <NavbarWrapper dark static>
         <Navbar />
       </NavbarWrapper>
-      {isCartOpen && <Sidebar />}
+      {isCartOpen && <SideDrawer />}
       <ProductPage></ProductPage>
     </>
   );

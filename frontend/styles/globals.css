@@ -32,3 +32,10 @@ h2,
 p {
   color: white;
 }
+
+button{
+  outline: none;
+  cursor: pointer;
+}
+
+

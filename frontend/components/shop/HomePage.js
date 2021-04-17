@@ -23,7 +23,7 @@ const Container = styled("section")`
 const Grid = styled("div")`
   width: 60%;
   margin: 0 auto;
-  min-height: 60vh;
+  min-height: 68vh;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 

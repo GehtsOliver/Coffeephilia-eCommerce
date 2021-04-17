@@ -6,7 +6,11 @@ const Container = styled("div")`
   width: 100vw;
   display: flex;
   justify-content: center;
+  align-items: center;
   column-gap: 1rem;
+  h3{
+    font-size: 1.5rem;
+  }
 `;
 
 const Control = styled("div")`
@@ -35,7 +39,7 @@ const Pagination = ({
       <Control
         disabled={productsMin === 0}
         onClick={() => backProducts()}
-        bg={"red"}
+        bg="#BC986A"
       >
         Back
       </Control>
@@ -48,7 +52,7 @@ const Pagination = ({
       <Control
         disabled={productsMax === products.length}
         onClick={() => nextProducts()}
-        bg={"black"}
+        bg="#BC986A"
       >
         Next
       </Control>
