@@ -22,14 +22,13 @@ const CartItemContainer = styled("article")`
 `;
 
 const CartItem = ({ item }) => {
-  console.log(item)
   return (
     <CartItemContainer>
       <Image src={item.variant.image.src} height={140} width={100} />
       <div>
         <h4>{item.title}</h4>
         <Quantity item={item} />
-        <h4>{item.variant.price*item.quantity} €</h4>
+        <h4>{item.variant.price * item.quantity} €</h4>
       </div>
     </CartItemContainer>
   );

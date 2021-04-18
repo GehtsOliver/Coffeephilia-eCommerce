@@ -17,7 +17,7 @@ const CtaContainer = styled("div")`
 `;
 
 const ShopButton = styled("a")`
-  background-color: #412D2A;
+  background-color: #412d2a;
   color: white;
   width: 20rem;
   height: 4rem;
@@ -28,15 +28,14 @@ const ShopButton = styled("a")`
   align-items: center;
   justify-content: center;
 
-  :hover{
-      color: #412D2A;
-      background-color: white;
-      
+  :hover {
+    color: #412d2a;
+    background-color: white;
   }
 
-  i{
-      font-size: 1.5rem;
-      margin-left: 0.5rem;
+  i {
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
   }
 `;
 
@@ -46,10 +45,10 @@ const CTA = () => {
       <h1>
         Coffeephilia offers a unique assortment of merely the finest beans
       </h1>
-      <h2>
-        Take a deep dive right into our Store or choose from the products below.
-      </h2>
-      <ShopButton href="/shop">Shop <i className="fas fa-shopping-cart"></i></ShopButton>
+      <h2>Take a deep dive right into our Store</h2>
+      <ShopButton href="/shop">
+        Shop <i className="fas fa-shopping-cart"></i>
+      </ShopButton>
     </CtaContainer>
   );
 };

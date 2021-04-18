@@ -46,7 +46,6 @@ const Navbar = ({ children }) => {
           <Darklayer /> <Sidebar />
         </>
       )}
-      {/* {burgerMenu && <Sidebar />} */}
     </>
   );
 };

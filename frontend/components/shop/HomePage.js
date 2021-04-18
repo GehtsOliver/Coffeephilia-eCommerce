@@ -60,7 +60,7 @@ const HomePage = ({}) => {
   }, [productsRender, productsIndex]);
 
   for (let i = productsIndex; i < productsRender; i++) {
-    productsMarkUp.push(<Product key={products.id} product={products[i]} />);
+    productsMarkUp.push(<Product key={i} product={products[i]} />);
   }
 
   const increaseProductsToRender = () => {

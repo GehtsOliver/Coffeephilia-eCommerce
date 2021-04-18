@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import ButtonContainer from "../main/footer/ButtonContainer";
 
+import ButtonContainer from "../main/footer/ButtonContainer";
 import LinkContainer from "../main/footer/LinkContainer";
 
 const FooterWrapper = styled("footer")`
@@ -16,19 +16,23 @@ const FooterComponent = styled("div")`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  transition: 1s all;
   @media (max-width: 800px) {
     flex-direction: column;
     padding: 3rem 0;
     row-gap: 1rem;
     text-align: center;
   }
+  :hover{
+    background-color: #412d2a;
+  }
 `;
 
 const Warning = styled("div")`
-  padding: 0.1rem;
+  padding: 0.3rem;
 
   font-weight: bold;
-  background: #BC986A;
+  background: #bc986a;
   color: black;
   text-align: center;
   font-family: "Helvetica";

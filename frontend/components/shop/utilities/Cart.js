@@ -53,7 +53,7 @@ const Cart = () => {
       <CloseCartButton/>
       <ItemContainer>
         {checkout.lineItems &&
-          checkout.lineItems.map((item) => <CartItem item={item} />)}
+          checkout.lineItems.map((item) => <CartItem key={item.id} item={item} />)}
       </ItemContainer>
       <PaymentContainer>
         <h3>Total amount: {checkout.paymentDue} €</h3>

@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import { ShopContext } from "../../../context/shopContext";
 
-const QuantityComponent = styled("control")`
+const QuantityComponent = styled("div")`
   display: flex;
   align-items: center;
   column-gap: 0.5rem;
