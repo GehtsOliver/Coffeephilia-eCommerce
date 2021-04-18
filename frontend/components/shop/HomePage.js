@@ -5,6 +5,7 @@ import styled from "styled-components";
 import Product from "./utilities/Product";
 import Pagination from "./utilities/Pagination";
 import Footer from "../utilities/Footer";
+import Cart from "./utilities/Cart";
 
 const Container = styled("section")`
   display: flex;
@@ -16,7 +17,6 @@ const Container = styled("section")`
 
   @media (max-width: 992px) {
     padding-top: 2rem;
-
   }
 `;
 
@@ -35,13 +35,16 @@ const Grid = styled("div")`
   }
 
   @media (max-width: 992px) {
+    min-height: 68vh;
+    width: 100vw;
     padding: 0;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
   }
 `;
 
 const HomePage = ({}) => {
-  const { fetchProducts, products } = useContext(ShopContext);
+  const { fetchProducts, products, isCartOpen } = useContext(ShopContext);
   const [productsIndex, setProductsIndex] = useState(0);
   const [productsRender, setProductsRender] = useState(8);
 
@@ -77,6 +80,7 @@ const HomePage = ({}) => {
   if (!products) return <div>No products yet</div>;
   return (
     <Container>
+      {isCartOpen && <Cart />}
       <Grid>{productsMarkUp}</Grid>
       <Pagination
         nextProducts={increaseProductsToRender}

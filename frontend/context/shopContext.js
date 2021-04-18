@@ -37,6 +37,17 @@ class ShopProvider extends Component {
     return product;
   };
 
+  updateItemInCheckout = async (variantId, quantity) => {
+    const lineItemToUpdate = [
+      { id: variantId, quantity: parseInt(quantity, 10) },
+    ];
+    const updatedCheckout = await client.checkout.updateLineItems(
+      this.state.checkout.id,
+      lineItemToUpdate
+    );
+    this.setState({ checkout: updatedCheckout });
+  };
+
   addItemToCheckout = async (variantId, quantity) => {
     const lineItemsToAdd = [
       {
@@ -65,6 +76,7 @@ class ShopProvider extends Component {
       <ShopContext.Provider
         value={{
           ...this.state,
+          updateItemInCheckout: this.updateItemInCheckout,
           fetchProductById: this.fetchProductById,
           fetchProducts: this.fetchProducts,
           closeCart: this.closeCart,

@@ -7,6 +7,7 @@ import Navbar from "../../components/utilities/Navbar";
 import SideDrawer from "../../components/shop/utilities/Cart";
 import { NavbarWrapper } from "../../components/utilities/NavbarWrapper";
 import ProductPage from "../../components/shop/ProductPage";
+import CartButton from "../../components/shop/utilities/CartButton";
 
 const id = () => {
   const { fetchProductById, product, isCartOpen } = useContext(ShopContext);
@@ -23,10 +24,12 @@ const id = () => {
     <>
       <Head title={`Coffeephilia - ${product.title}`} />
       <NavbarWrapper dark static>
-        <Navbar />
+        <Navbar>
+          <CartButton/>
+        </Navbar>
       </NavbarWrapper>
       {isCartOpen && <SideDrawer />}
-      <ProductPage></ProductPage>
+      <ProductPage />
     </>
   );
 };

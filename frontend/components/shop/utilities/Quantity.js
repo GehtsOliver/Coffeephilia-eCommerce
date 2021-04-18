@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+import { ShopContext } from "../../../context/shopContext";
 
-const QuantityComponent = styled("div")`
+const QuantityComponent = styled("control")`
   display: flex;
   align-items: center;
   column-gap: 0.5rem;
@@ -12,7 +13,7 @@ const QuantityComponent = styled("div")`
     width: 2rem;
     height: 2rem;
     color: white;
-    background: #BC986A;
+    background: transparent;
     font-size: 1.2rem;
     cursor: pointer;
     border: none;
@@ -24,12 +25,26 @@ const QuantityComponent = styled("div")`
   }
 `;
 
-const Quantity = ({ setQuantity, quantity }) => {
+const Quantity = ({ item }) => {
+  const { updateItemInCheckout } = useContext(ShopContext);
+
   return (
     <QuantityComponent>
-      <button onClick={() => setQuantity(quantity - 1)}>-</button>
-      <p>{quantity}</p>
-      <button onClick={() => setQuantity(quantity + 1)}>+</button>
+      <button
+        onClick={() => {
+          updateItemInCheckout(item.id, item.quantity - 1);
+        }}
+      >
+        -
+      </button>
+      <p>{item.quantity}</p>
+      <button
+        onClick={() => {
+          updateItemInCheckout(item.id, item.quantity + 1);
+        }}
+      >
+        +
+      </button>
     </QuantityComponent>
   );
 };

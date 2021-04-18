@@ -25,12 +25,11 @@ const StyledContainerRight = styled("div")`
   }
 `;
 
-const Navbar = () => {
+const Navbar = ({ children }) => {
   const { burgerMenu } = useContext(BurgerMenuContext);
 
   return (
     <>
-      {burgerMenu && <Darklayer />}
       <StyledContainerLeft>
         <NavbarItem link="/" title="Coffeephilia®">
           <Image
@@ -41,12 +40,13 @@ const Navbar = () => {
         </NavbarItem>
         <BurgerMenu />
       </StyledContainerLeft>
-      <StyledContainerRight>
-        <NavbarItem link="/" title="Home"></NavbarItem>
-        <NavbarItem link="/shop" title="Shop"></NavbarItem>
-        <NavbarItem link="/contact" title="Contact"></NavbarItem>
-      </StyledContainerRight>
-      {burgerMenu && <Sidebar />}
+      <StyledContainerRight>{children}</StyledContainerRight>
+      {burgerMenu && (
+        <>
+          <Darklayer /> <Sidebar />
+        </>
+      )}
+      {/* {burgerMenu && <Sidebar />} */}
     </>
   );
 };

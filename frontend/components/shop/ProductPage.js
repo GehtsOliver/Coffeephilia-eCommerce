@@ -1,9 +1,9 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import Image from "next/image";
+
 import { ShopContext } from "../../context/shopContext";
 import { Button } from "./utilities/Button";
-import Quantity from "./utilities/Quantity";
 import { BackButton } from "../utilities/BackButton";
 
 const PageWrapper = styled("section")`
@@ -18,14 +18,24 @@ const ProductWrapper = styled("article")`
   display: flex;
   column-gap: 3rem;
   p {
+    width: 15rem;
     color: black;
+  }
+  @media (max-width: 992px) {
+    flex-direction: column;
+    padding-top: 2rem;
+    > div > div > img {
+      height: 18rem;
+    }
+
+    @media (max-height: 700px){
+      padding-top: 12rem;
+    }
   }
 `;
 
 const ProductPage = () => {
   const { product, addItemToCheckout } = useContext(ShopContext);
-
-  const [quantity, setQuantity] = useState(1);
 
   if (!product.variants) return <div>Loading</div>;
 
@@ -38,14 +48,14 @@ const ProductPage = () => {
         )}
         <div>
           <h3>{product.title}</h3>
-          <h3>{product.variants[0].price} €</h3>
+          <h4>{product.variants[0].price} €</h4>
+          <h4>incl. VAT</h4>
           <p>{product.description}</p>
-          <Quantity quantity={quantity} setQuantity={setQuantity} />
           <Button
             bg="#BC986A"
             color="white"
             onClick={() => {
-              addItemToCheckout(product.variants[0].id, quantity);
+              addItemToCheckout(product.variants[0].id, 1);
             }}
           >
             Add to <i className="fas fa-shopping-cart" />

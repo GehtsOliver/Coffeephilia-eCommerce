@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+
 import Navbar from "../utilities/Navbar";
 import { NavbarWrapper } from "../utilities/NavbarWrapper";
+import NavbarItem from "../main/navbar/NavbarItem"
 import About from "./About";
 
 const StyledBrand = styled("section")`
@@ -20,7 +22,11 @@ const Brand = () => {
   return (
     <StyledBrand>
       <NavbarWrapper>
-        <Navbar />
+        <Navbar>
+          <NavbarItem link="/" title="Home" />
+          <NavbarItem link="/shop" title="Shop" />
+          <NavbarItem link="/contact" title="Contact" />
+        </Navbar>
       </NavbarWrapper>
       <About />
     </StyledBrand>

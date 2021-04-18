@@ -15,15 +15,14 @@ const StyledSidebar = styled("nav")`
   justify-content: center;
   row-gap: 2rem;
   z-index: 2;
-  color: ${(props) => props.color};
   
   div > h1 {
     margin: 0;
     margin-left: 0.5rem;
-    color: ${(props) => props.color};
+    color: white;
 
     font-weight: 300;
-    font-size: 30px;
+    font-size: 2.5rem;
     :hover {
       font-weight: 400;
     }

@@ -10,6 +10,7 @@ left:0;
 z-index: 1;
 background: black;
 opacity: 0.6;
+overflow-y: hidden;
 
 `
 

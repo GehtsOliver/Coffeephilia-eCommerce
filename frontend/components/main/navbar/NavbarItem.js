@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+import { BurgerMenuContext } from "../../../context/burgerContext";
 
 import Link from "next/link";
 
@@ -9,20 +10,22 @@ const LinkContainer = styled("div")`
   align-items: center;
   font-size: 1.5rem;
   transition: all 100ms;
-  color: white; 
+  color: white;
   i {
     margin-left: 0.3rem;
   }
   :hover {
     cursor: pointer;
-    transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.01, 1.01, 1.01);
   }
 `;
 
 const NavbarItem = ({ title, children, link }) => {
+  const { setBurgerMenu } = useContext(BurgerMenuContext);
+
   return (
     <Link href={link}>
-      <LinkContainer>
+      <LinkContainer onClick={() => setBurgerMenu(false)}>
         <h1>{title}</h1>
         {children}
       </LinkContainer>
