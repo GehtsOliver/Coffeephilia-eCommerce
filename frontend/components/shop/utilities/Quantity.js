@@ -4,8 +4,10 @@ import { ShopContext } from "../../../context/shopContext";
 
 const QuantityComponent = styled("div")`
   display: flex;
+  flex-direction: row !important;
   align-items: center;
   column-gap: 0.5rem;
+  
   margin-bottom: 0.5rem;
   justify-content: center;
 

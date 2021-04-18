@@ -38,7 +38,7 @@ const SideDrawerWrapper = styled("div")`
 const ItemContainer = styled("div")`
   display: flex;
   flex-direction: column;
-  row-gap: 1rem;
+  row-gap: 2rem;
 `;
 
 const PaymentContainer = styled("div")`
@@ -47,7 +47,6 @@ const PaymentContainer = styled("div")`
 
 const Cart = () => {
   const { checkout } = useContext(ShopContext);
-  console.log(checkout);
   return (
     <SideDrawerWrapper>
       <CloseCartButton/>

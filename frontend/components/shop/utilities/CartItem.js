@@ -19,6 +19,10 @@ const CartItemContainer = styled("article")`
     justify-content: center;
     text-align: center;
   }
+
+  > div > div {
+    height: 3.5rem;
+  }
 `;
 
 const CartItem = ({ item }) => {
