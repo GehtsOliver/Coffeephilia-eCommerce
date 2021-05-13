@@ -1,34 +1,15 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Coffeephilia eCommerce Store
 
-## Getting Started
+## Coffeephilia's website is a fully-fletched eCommerce store including landing page
 
-First, run the development server:
+![Coffeephilia eCommerce](https://res.cloudinary.com/djiqhmzqs/image/upload/v1618747413/Coffeephilia_09cde92a6c.jpg "Coffeephilia eCommerce")
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+### Live-Demo: [Coffeephilia eCommerce](https://coffeephilia-frontend.vercel.app/ "Coffeephilia eCommerce") 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### This simple eCommerce website was primarily created with NextJS on the Frontend combined with the Shopify Storefront API as backend. The website does not only offer a product/ firm landing page but also provides an eCommerce Store which was build on top of Shopify's Storefront API. After my personal website, this is my second project built with NextJS. You can see how fast the website is due to Next's static site generation (SSG). Every page is pre-built by NextJS. Shopify's Buy SDK was used to connect the store page to Shopify's backend which offers a secure way to fetch the products and handle payment.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### Libraries/Packages Used:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
++ React-Scroll-Parallax: Parallax scroll effect package
++ Shopify-buy SDK: Facilitates coupling to Shopify's Storefront API
++ Styled-Components: CSS-in-JS library
