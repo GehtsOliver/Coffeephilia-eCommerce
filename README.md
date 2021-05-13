@@ -1,4 +1,4 @@
-# Coffeephilia eCommerce Store
+# Coffeephilia eCommerce website
 
 ## Excerpt
 Coffeephilia's website is a fully-fletched eCommerce store including landing page
